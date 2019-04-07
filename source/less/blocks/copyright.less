@@ -1,0 +1,53 @@
+.copyright {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.copyright__link {
+  width: 27px;
+  height: 34px;
+
+  fill: @color-pink;
+
+  &:hover svg,
+  &:focus svg {
+    fill: @color-black;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active svg {
+    fill: @color-dark-gray;
+  }
+}
+
+.copyright__text {
+  margin-top: 5px;
+  margin-right: 15px;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    margin-top: 14px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright {
+    margin-top: 15px;
+  }
+
+  .copyright__text {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .copyright {
+    margin-top: 34px;
+  }
+}

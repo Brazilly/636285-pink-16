@@ -1,0 +1,42 @@
+.page-footer__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding: 40px 20px;
+
+  text-align: center;
+}
+
+.page-footer__logo {
+  display: inline-block;
+  width: 147px;
+  height: 40px;
+
+  background: url("../../img/logo-pink-blue-mobile.svg") no-repeat;
+  background-position: 0 0;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 660px;
+    padding: 36px 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    width: 960px;
+    padding: 70px 10px;
+  }
+
+  .page-footer__logo {
+    background: url("../img/logo-pink-blue-desktop.svg") no-repeat;
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .page-footer--index-page {
+    display: none;
+  }
+}

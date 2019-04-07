@@ -1,0 +1,155 @@
+.reviews {
+  padding-bottom: 36px;
+}
+
+.reviews__item {
+  text-align: center;
+}
+
+.reviews__text {
+  margin: -4px auto 0;
+
+  line-height: 30px;
+}
+
+.reviews__list {
+  width: 320px;
+  margin: 42px auto 30px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.reviews__toggles {
+  margin: 0;
+
+  text-align: center;
+}
+
+.reviews__author-name {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews {
+    padding-bottom: 16px;
+  }
+
+  .reviews__text {
+    margin-bottom: 13px;
+
+    font-size: 18px;
+  }
+
+  .reviews__list {
+    width: 660px;
+    margin-bottom: 19px;
+  }
+
+  .reviews__author-name {
+    margin-bottom: -9px;
+
+    font-size: 20px;
+  }
+
+  .reviews__item {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .reviews__author-info {
+    order: -1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: -118px;
+
+      width: 79px;
+      height: 64px;
+      transform: translateX(-50%);
+
+      background: url("../img/icon-quotes.svg");
+      background-size: 100%;
+    }
+  }
+
+  .reviews__list {
+    position: relative;
+
+    width: 940px;
+    margin-top: 189px;
+    margin-bottom: 3px;
+  }
+
+  .reviews__item {
+    width: 790px;
+    margin: 0 auto;
+  }
+
+  .reviews__author-name {
+    margin-bottom: -14px;
+
+    font-size: 24px;
+  }
+
+  .reviews__author-info {
+    font-size: 18px;
+  }
+
+  .reviews__toggle {
+    display: none;
+  }
+
+  .reviews__button--previous {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 0;
+
+    width: 22px;
+    height: 41px;
+
+    font-size: 0;
+
+    background: url("../img/icon-review-arrow-left.svg");
+    border: 0;
+    cursor: pointer;
+  }
+
+  .reviews__button--next {
+    content: "";
+    position: absolute;
+    top: 24px;
+    right: 0;
+
+    width: 22px;
+    height: 41px;
+
+    font-size: 0;
+
+    background: url("../img/icon-review-arrow-right.svg");
+    border: 0;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .reviews__author-info {
+    display: none;
+  }
+}
+
+@media (max-width: @desktop-width) {
+  .reviews__button {
+    display: none;
+  }
+}
