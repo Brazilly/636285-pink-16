@@ -54,7 +54,7 @@
 .upload-form__fill {
   position: absolute;
 
-  fill: @color-dark-gray;
+  fill: #dedede;
 }
 
 .upload-form__contrast {
@@ -62,7 +62,7 @@
   top: 8px;
   left: 5px;
 
-  fill: @color-dark-gray;
+  fill: #dedede;
 }
 
 .upload-form__range-control {
@@ -243,6 +243,14 @@
     &--fill,
     &--contrast {
       display: none;
+    }
+  }
+
+  .upload-form__fill,
+  .upload-form__contrast {
+    &:hover,
+    &:focus {
+      fill: #8d949c;
     }
   }
 }

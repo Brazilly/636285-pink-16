@@ -109,6 +109,17 @@
     display: none;
   }
 
+  .reviews__button {
+    &:hover,
+    &:focus {
+      fill: #83888e;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
   .reviews__button--previous {
     content: "";
     position: absolute;
@@ -120,9 +131,10 @@
 
     font-size: 0;
 
-    background: url("../img/icon-review-arrow-left.svg");
+    fill: @color-gray;
     border: 0;
     cursor: pointer;
+    background-color: transparent;
   }
 
   .reviews__button--next {
@@ -136,9 +148,11 @@
 
     font-size: 0;
 
-    background: url("../img/icon-review-arrow-right.svg");
+    fill: @color-gray;
     border: 0;
     cursor: pointer;
+    background-color: transparent;
+    transform: rotate(180deg);
   }
 }
 

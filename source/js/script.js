@@ -3,6 +3,7 @@ var headerOpen = document.querySelector(".page-header");
 var menuOpen = document.querySelector(".main-nav--closed");
 var introShort = document.querySelector(".main-intro__inner");
 
+
 link.classList.remove("main-nav--nojs");
 
 link.addEventListener("click", function () {

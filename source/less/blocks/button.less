@@ -17,10 +17,32 @@
 
   &--active {
     color: @color-pink;
+
+    &:hover,
+    &:focus {
+      background-color: @color-pink;
+      color: @color-white;
+      outline: none;
+    }
+
+    &:active {
+      color: rgba(@color-white, 0.5);
+    }
   }
 
   &--disabled {
     color: #dddfe0;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      border-color: #b5b9bc;
+      outline: none;
+    }
+
+    &:active {
+      background-color: #b5b9bc;
+    }
   }
 }
 

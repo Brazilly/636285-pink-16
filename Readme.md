@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Василий Барков](https://up.htmlacademy.ru/adaptive/15/user/636285).
-* Наставник: [Анна Пономарёва](https://htmlacademy.ru/profile/id153610).
+* Наставник: Без наставника.
 
 ---
 

@@ -30,9 +30,15 @@
   box-shadow: 0 10px 0 0 #ffffff, 0 20px 0 0 #ffffff;
 }
 
-.main-nav--closed .main-nav__toggle:active::before {
+.main-nav--closed .main-nav__toggle:hover::before,
+.main-nav--closed .main-nav__toggle:focus::before {
   background-color: @color-pink;
   box-shadow: 0 8px 0 0 @color-pink, 0 16px 0 0 @color-pink;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: @color-gray;
+  box-shadow: 0 8px 0 0 @color-gray, 0 16px 0 0 @color-gray;
 }
 
 .main-nav--opened .main-nav__toggle {

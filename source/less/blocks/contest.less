@@ -136,6 +136,16 @@
   font-size: 18px;
 
   border: 2px solid @color-gray;
+
+  &:hover,
+  &:focus {
+    border: 2px solid @color-black;
+    outline: none;
+  }
+
+  &:active {
+    border: 2px solid @color-pink;
+  }
 }
 
 .contest__checkbox-input:checked + label::before {
@@ -167,6 +177,16 @@
   border: 2px solid #e5e5e5;
 }
 
+.contest__checkbox-input:hover + label::after,
+.contest__checkbox-input:focus + label::after {
+  border: 2px solid @color-black;
+  outline: none;
+}
+
+.contest__checkbox-input:active + label::after {
+  border: 2px solid @color-pink;
+}
+
 .contest__radio-input:checked + label::before {
   content: "";
   position: absolute;
@@ -195,6 +215,16 @@
   border-radius: 50%;
 }
 
+.contest__radio-input:hover + label::after,
+.contest__radio-input:focus + label::after {
+  border: 2px solid @color-black;
+  outline: none;
+}
+
+.contest__radio-input:active + label::after {
+  border: 2px solid @color-pink;
+}
+
 .contest__text-area {
   width: 100%;
   min-height: 201px;
@@ -204,21 +234,16 @@
   line-height: 28px;
 
   border: 2px solid #e5e5e5;
-}
 
-.contest__button {
-  margin-bottom: 25px;
-  padding: 15px 50px;
+  &:hover,
+  &:focus {
+    border: 2px solid @color-black;
+    outline: none;
+  }
 
-  font-size: 18px;
-  line-height: 32px;
-  color: @color-white;
-  text-align: center;
-  text-transform: uppercase;
-
-  background-color: @color-green;
-  border-style: none;
-  outline: 2px solid blue;
+  &:active {
+    border: 2px solid @color-pink;
+  }
 }
 
 .contest__require {
