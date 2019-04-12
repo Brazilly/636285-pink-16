@@ -47,22 +47,30 @@
 
 .upload-form__crop {
   position: absolute;
+  left: -8px;
 
   fill: @color-pink;
+  border: none;
+  background-color: transparent;
 }
 
 .upload-form__fill {
   position: absolute;
+  left: -8px;
 
   fill: #dedede;
+  border: none;
+  background-color: transparent;
 }
 
 .upload-form__contrast {
   position: absolute;
   top: 8px;
-  left: 5px;
+  left: -3px;
 
   fill: #dedede;
+  border: none;
+  background-color: transparent;
 }
 
 .upload-form__range-control {
@@ -74,6 +82,7 @@
   margin: 85px auto 0;
 
   background-color: @color-pale-dirty-blue;
+  outline: none;
 
   &::before {
     content: "";
@@ -86,6 +95,11 @@
     background-color: @color-gray;
     border: 2px solid @color-pink;
     border-radius: 50%;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-color: @color-pink;
   }
 }
 
@@ -150,15 +164,20 @@
     }
   }
 
+  .upload-form__crop {
+    left: -5px;
+  }
+
   .upload-form__fill {
     top: 3px;
+    left: -5px;
 
     fill: @color-pink;
   }
 
   .upload-form__contrast {
     top: 5px;
-    left: 7px;
+    left: 1px;
 
     fill: @color-pink;
   }
@@ -210,15 +229,17 @@
 
   .upload-form__crop {
     top: -10px;
+    left: -7px;
   }
 
   .upload-form__fill {
     top: -5px;
+    left: -7px;
   }
 
   .upload-form__contrast {
     top: -2px;
-    left: 5px;
+    left: -2px;
   }
 
   .upload-form__range-control {
