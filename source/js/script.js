@@ -3,9 +3,10 @@ var headerOpen = document.querySelector(".page-header");
 var menuOpen = document.querySelector(".main-nav--closed");
 var introShort = document.querySelector(".main-intro__inner");
 
+// Удаление класса, который открывает меню в случае если JS отключен.
+menuOpen.classList.remove("main-nav--nojs");
 
-link.classList.remove("main-nav--nojs");
-
+// Работа меню
 link.addEventListener("click", function () {
   if (menuOpen.classList.contains("main-nav--closed")) {
     menuOpen.classList.remove("main-nav--closed");

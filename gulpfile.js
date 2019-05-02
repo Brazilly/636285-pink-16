@@ -2,6 +2,7 @@
 
 var gulp = require("gulp");
 var less = require("gulp-less");
+var sourcemap = require("gulp-sourcemaps");
 var posthtml = require("gulp-posthtml");
 var htmlmin = require("gulp-htmlmin");
 var postcss = require("gulp-postcss");
@@ -21,6 +22,7 @@ var server = require("browser-sync").create();
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
+    .pipe(sourcemap.init())
     .pipe(less())
     .pipe(postcss([
       autoprefixer()
@@ -28,6 +30,7 @@ gulp.task("css", function () {
     .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
+    .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
@@ -37,7 +40,7 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("build"));
 });
 
@@ -67,7 +70,7 @@ gulp.task("webp", function () {
 });
 
 gulp.task("sprite", function () {
-  return gulp.src("source/img/icon-*.svg")
+  return gulp.src("source/img/sprite-icons-*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
